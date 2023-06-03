@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт web-студії "Web-Deco"</title>
     <!-- ================  JAVASCRIPT ==================== -->
+    <script src="js/clock1.js"></script>
     <script type="text/javascript">
         function send()
         {  var valid = true;
@@ -26,6 +27,10 @@
            }
 
         }
+    </script>
+    <script>
+        window.onload = function() { 
+        setInterval(clockPainting, 1000);  }
     </script>
     <!--========================================================-->
 <style>
@@ -56,7 +61,8 @@
         </tr>
         <tr>
             <td width="30%" vslign="top">
-
+<center><canvas id="canvas" height="120" width="120"></canvas></center>
+<hr>
             <font size="5" color="navy"><h2>Новини</h2></font>
                 <font size="5" >
             <ul>
