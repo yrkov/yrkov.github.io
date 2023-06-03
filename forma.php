@@ -113,6 +113,29 @@ echo "<h2 align='center' > Ви ввели :".$_POST['name2'].",".$_POST['name1'
 ?>
 </h1>
 
+<h1 align="center">Список зареєстрованих !</h1>;
+<TABLE align="center" border="1" width="600">
+    <tr>
+<td align="center"><b>Прізвище</b></td>
+<td align="center"><b>Ім'я</b></td>
+<td align="center"><b>E-mail</b></td>
+<td align="center"><b>Пароль</b></td>
+    </tr>
+<?php
+$data = file("baza.txt");
+foreach ($data as $line) {
+    $trs = explode(";", $line);
+            echo '<tr>';
+    echo '<td>'.$trs[0].'</td>';
+
+    echo '<td>'.$trs[1].'</td>';
+    echo '<td>'.$trs[2].'</td>';
+    echo '<td>'.$trs[3].'</td>';
+            echo '</tr>';
+    }
+?>
+</table>';
+
 </td>
         </tr>
         <tr>
